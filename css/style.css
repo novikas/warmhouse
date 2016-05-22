@@ -44,7 +44,7 @@ a {    text-decoration: none }
 
 p {
     color: #666666;
-    font-size: 12px;
+    font-size: 15px;
     line-height: 20px;
     margin-bottom: 20px;
 }
@@ -57,7 +57,7 @@ form {
 
 label {
     clear: both;
-    color: #FFFFFF;
+    color: #666666;
     float: left;
     font-size: 18px;
     padding: 15px 22px 15px 18px;
@@ -125,6 +125,8 @@ input[type="submit"]:hover {
     box-shadow: none;
 }
 
+
+
 ::-webkit-input-placeholder {    color: #CCCCCC }
 
 :-moz-placeholder {
@@ -181,7 +183,7 @@ header .header nav#menu {
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 210px;
+    margin-top: 74px;
     padding-bottom: 10px;
     position: relative;
     z-index: 1;
@@ -210,10 +212,10 @@ header .header nav#menu ul li a {
     -webkit-transition: 200ms ease-in all;
     border: 2px solid transparent;
     border-radius: 6px;
-    color: #FFF;
+    color: #E7E9EB;
     display: list-item;
     font-size: 25px;
-    padding: 8px;
+    padding: 20px;
     transition: 200ms ease-in all;
 }
 
@@ -254,6 +256,15 @@ header .header .tint {
     margin-left: auto;
     margin-right: auto;
     width: 960px;
+}
+#title {
+	text-decoration: none;
+	font-size: 35px;
+	color: white;
+	text-align: center;
+	margin-top: 28px;
+	vertical-align: baseline;
+	position: relative;
 }
 
 header .header.mockup {
@@ -397,7 +408,7 @@ header .header.mockup #mockup_slider #cover .banner ul li {
     background-size: 100% 100%;
     display: block;
     float: left;
-    min-height: 325px;
+    min-height: 600px;
     width: 33%;
 }
 
@@ -454,6 +465,7 @@ header .header.mockup #logo, header .header.minimal #logo, header .header.layere
     position: relative;
     width: 140px;
     z-index: 1;
+		margin-top: 70px;
 }
 
 header .header.layered {
@@ -539,31 +551,8 @@ header .header.fixed #menu_cover:before {
     z-index: 2;
 }
 
-header .header.fixed #menu_cover:after {
-    -moz-border-radius: 50px 0px 0px 0px;
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -webkit-border-radius: 50px 0px 0px 0px;
-    -webkit-transform: rotate(45deg);
-    background-image: none !important;
-    border-radius: 50px 0px 0px 0px;
-    bottom: -15px !important;
-    content: '.';
-    display: block;
-    height: 28px;
-    left: 50%;
-    margin-left: -14px;
-    overflow: hidden;
-    position: absolute;
-    text-indent: -9999px;
-    top: auto !important;
-    transform: rotate(45deg);
-    width: 28px;
-    z-index: 2;
-}
 
-header .header.fixed nav#menu {    margin-top: 0px }
+header .header.fixed nav#menu {    margin-top: -17px }
 
 .bg.green {    background-color: #2ecc71 }
 
@@ -1768,7 +1757,7 @@ section #contact .right ul li span:first-child:after {
 section #contact .right ul li span:last-child {    width: 290px }
 
 section #contact .left, #contact .right {
-    float: left;
+    float: right;
     margin-bottom: 40px;
     width: 460px;
 }
@@ -1786,12 +1775,11 @@ section #contact .left:after {
 }
 
 section #contact .left {
-    margin-right: 10px;
-    position: relative;
+    margin-right: 350px;
 }
 
 section #contact h3 {
-    padding-left: 16px;
+    padding-left: 80px;
     text-align: left;
 }
 
