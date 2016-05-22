@@ -5,14 +5,14 @@
  if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
 
 /* Сюда впишите свою эл. почту */
- $address = "droiper@mail.ru";
+ $address = "amadeomazerai93@gmail.com";
 
 /* А здесь прописывается текст сообщения, \n - перенос строки */
  $mes = "Тема: Заказ обратного звонка!\nТелефон: $phone\nИмя: $name\nE-mail: $adress";
 
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub='Заказ с сайта'; //сабж
-$email='<yourdomen.ru>'; // от кого
+$email='warmhouse.herokuapp.com'; // от кого
  $send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
 
 ini_set('short_open_tag', 'On');
