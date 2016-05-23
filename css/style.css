@@ -38,7 +38,13 @@ body {
     font-size: 12px;
 }
 
-h1, h2, h3, h4, h5, h6 { }
+h1, h2, h3, h4, h5 { }
+h6 {
+	color: #FFFFFF;
+	font-size: 25px;
+	line-height: 20px;
+
+}
 
 a {    text-decoration: none }
 
@@ -183,7 +189,7 @@ header .header nav#menu {
     display: table;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 74px;
+    margin-top: 50px;
     padding-bottom: 10px;
     position: relative;
     z-index: 1;
@@ -212,7 +218,7 @@ header .header nav#menu ul li a {
     -webkit-transition: 200ms ease-in all;
     border: 2px solid transparent;
     border-radius: 6px;
-    color: #E7E9EB;
+    color: #FFFFFF;
     display: list-item;
     font-size: 25px;
     padding: 20px;
@@ -465,7 +471,7 @@ header .header.mockup #logo, header .header.minimal #logo, header .header.layere
     position: relative;
     width: 140px;
     z-index: 1;
-		margin-top: 70px;
+		margin-top: 55px;
 }
 
 header .header.layered {
