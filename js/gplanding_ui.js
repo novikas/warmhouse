@@ -33,8 +33,8 @@ $(window).scroll(function() {
 	} else {
 
 		$('.header').stop().removeClass('fixed').animate({background: 'rgba(255,255,255,0)'}, 200 );
-		$('.header nav#menu li a, .mean-bar nav li a').removeClass('current');	
-		$('#toTop').animate({'opacity':'0'},200);			
+		$('.header nav#menu li a, .mean-bar nav li a').removeClass('current');
+		$('#toTop').animate({'opacity':'0'},200);
 
 	};
 
@@ -76,7 +76,7 @@ function checkSectionSelected(scrolledTo){
     var threshold = 100;
     var i;
     for (i = 0; i < sections.length; i++) {
-        
+
         var section = $(sections[i]);
         var target = getTargetTop(section);
         if (scrolledTo > target - threshold && scrolledTo < target + threshold) {
@@ -103,10 +103,10 @@ $(function() {
 				fluid: true,
 				dots: true
 			});
-    
+
     $('.unslider-arrow').click(function() {
         var fn = this.className.split(' ')[1];
-        
+
         //  Either do unslider.data('unslider').next() or .prev() depending on the className
         unslider.data('unslider')[fn]();
     });
@@ -119,7 +119,7 @@ if ($('.slider').length != 0) {
 $(window).load(function(){
 	$('.slider').fractionSlider({
 		'fullWidth': 			false,
-		'controls': 			true, 
+		'controls': 			true,
 		'pager': 				true,
 		'responsive' : true, // responsive slider (see below for some implementation tipps)
 		'dimensions' : '960, 440', /* IMPORTANT:
@@ -159,8 +159,8 @@ $('a.get_blog').live('click', function() {
 
 		$('#blog').append('<div id="loading_blog_overlay"></div>');
 
-		$(this).slideUp(1000, function() { 
-			
+		$(this).slideUp(1000, function() {
+
 			$('#blog .content').remove();
 
 			random_number = Math.ceil(Math.random() * 1000)+Math.ceil(Math.random() * 1000);
@@ -174,7 +174,7 @@ $('a.get_blog').live('click', function() {
 
 					$('.get_blog#'+random_number).html(data);
 
-					$('.get_blog#'+random_number).slideDown(1000, function() { 
+					$('.get_blog#'+random_number).slideDown(1000, function() {
 
 						$('.get_blog#'+random_number).animate({
 							opacity: '1'
@@ -187,7 +187,7 @@ $('a.get_blog').live('click', function() {
 				}
 			});
 
-		}); 
+		});
 
 	});
 
@@ -203,8 +203,8 @@ $('a.down_blog').live('click', function() {
 
 		$('#blog').append('<div id="loading_blog_overlay"></div>');
 
-		$(this).slideUp(1000, function() { 
-			
+		$(this).slideUp(1000, function() {
+
 			$('#blog .content').remove();
 
 			random_number = Math.ceil(Math.random() * 1000)+Math.ceil(Math.random() * 1000);
@@ -218,7 +218,7 @@ $('a.down_blog').live('click', function() {
 
 					$('.all#'+random_number).html(data);
 
-					$('.all#'+random_number).slideDown(1000, function() { 
+					$('.all#'+random_number).slideDown(1000, function() {
 
 						$('.all#'+random_number).animate({
 							left: '0',
@@ -232,7 +232,7 @@ $('a.down_blog').live('click', function() {
 				}
 			});
 
-		}); 
+		});
 
 	});
 
@@ -256,7 +256,7 @@ function initialize() {
   });
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+//google.maps.event.addDomListener(window, 'load', initialize);
 
 // Validation & Ajax Contact Form Settings
 
@@ -277,36 +277,36 @@ $('#contact_form input[type="submit"]').bind('click', function() {
 		},
 		errorElement: "span"
 	});
-	
+
 	if($("#contact_form").valid()) {
-	
-		$.ajax({  
+
+		$.ajax({
 			url: "mail.php",
 			type: 'POST',
-			data: "name="+$('#name').val()+"&email="+$('#email').val()+"&subject="+$('#subject').val()+"&message="+$('#message').val(), 
+			data: "name="+$('#name').val()+"&email="+$('#email').val()+"&subject="+$('#subject').val()+"&message="+$('#message').val(),
 		  	success: function(data) {
 		  		if(data == 'Complete') {
 		  			alert();
-					$('#contact_form').html("<div id='notification'><h2 style='color: rgb(33, 197, 26);'>Your Message Has Been Sent !</h2><p>"+data+"</p></div>")  
-					.hide()  
-					.fadeIn(1500, function() {  
-					  $('#contact_form').append("");  
-					});  
+					$('#contact_form').html("<div id='notification'><h2 style='color: rgb(33, 197, 26);'>Your Message Has Been Sent !</h2><p>"+data+"</p></div>")
+					.hide()
+					.fadeIn(1500, function() {
+					  $('#contact_form').append("");
+					});
 				} else {
-					$('#contact_form').html("<div id='notification'><h2 style='color: #F00;'>Error !</h2><p>"+data+"</p></div>")  
-					.hide()  
-					.fadeIn(1500, function() {  
-					  $('#contact_form').append("");  
-					});  
+					$('#contact_form').html("<div id='notification'><h2 style='color: #F00;'>Error !</h2><p>"+data+"</p></div>")
+					.hide()
+					.fadeIn(1500, function() {
+					  $('#contact_form').append("");
+					});
 				}
 
 		  	},
 		  	error: function() {
 				$('#contact_form').html("<div id='error'><h2>Sorry, an error occurred.</h2></div>").css('color', 'red');
-			}  
-		});  
-		
-		return false;  
+			}
+		});
+
+		return false;
 
 	}
 
