@@ -1,9 +1,12 @@
 <?php
 
- /* Здесь проверяется существование переменных */
-  if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
- if (isset($_POST['name'])) {$name = $_POST['name'];}
- if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
+require 'vendor/autoload.php';
+
+/* Здесь проверяется существование переменных */
+if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
+if (isset($_POST['name'])) {$name = $_POST['name'];}
+if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
+
 
 /* Сюда впишите свою эл. почту */
  $address = "amadeomazerai93@gmail.com";
@@ -14,7 +17,15 @@
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub='Заказ с сайта'; //сабж
 $email='noreply@warmhouse.herokuapp.com'; // от кого
-$send = mail ($address,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
+$sendgrid = new SendGrid('app51144825@heroku.com', 'GetPassword93');
+$email = new SendGrid\Email();
+$email->addTo($address)
+    ->setFrom($email)
+    ->setSubject($sub)
+    ->setText($mes)
+    ->setHtml('<strong>Hello World!</strong>');
+
+$sendgrid->send($email);
 
 ini_set('short_open_tag', 'On');
 header('Refresh: 3; URL=index.html');
@@ -29,15 +40,15 @@ header('Refresh: 3; URL=index.html');
 <style type="text/css">
 body
 {
-   
+
    background: #22BFF7 url(img/zakaz.jpg) top -70% center no-repeat;
-   
+
 }
 
 <script type="text/javascript">
 setTimeout('location.replace("/index.html")', 3000);
 /*Изменить текущий адрес страницы через 3 секунды (3000 миллисекунд)*/
-</script> 
+</script>
 </head>
 </body>
 </html>
