@@ -26,8 +26,7 @@ $email->addTo($address)
     ->setSubject($sub)
     ->setText($mes)
     ->setHtml('<strong>Hello World!</strong>');
-echo "It's fine";
-return "";
+
 $sendgrid->send($email);
 
 ini_set('short_open_tag', 'On');
