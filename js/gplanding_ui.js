@@ -261,7 +261,7 @@ function initialize() {
 // Validation & Ajax Contact Form Settings
 
 $('#contact_form input[type="submit"]').bind('click', function() {
-	alert("Hello");
+	return true;
 	$("#contact_form").validate({
 		rules: {
 			name: { required:true },
