@@ -18,9 +18,8 @@ if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
 $sub='Заказ с сайта'; //сабж
 $email='noreply@warmhouse.herokuapp.com'; // от кого
 $sendgrid = new SendGrid('app51144825@heroku.com', 'GetPassword93');
-echo "It's fine";
+
 $email = new SendGrid\Email();
-return "";
 $email->addTo($address)
     ->setFrom($email)
     ->setSubject($sub)
@@ -28,7 +27,8 @@ $email->addTo($address)
     ->setHtml('<strong>Hello World!</strong>');
 
 $sendgrid->send($email);
-
+echo "It's fine";
+return "";
 ini_set('short_open_tag', 'On');
 header('Refresh: 3; URL=index.html');
 ?>
