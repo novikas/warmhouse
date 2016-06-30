@@ -18,7 +18,9 @@ if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
 $sub='Заказ с сайта'; //сабж
 $email='noreply@warmhouse.herokuapp.com'; // от кого
 $sendgrid = new SendGrid('app51144825@heroku.com', 'GetPassword93');
+echo "It's fine";
 $email = new SendGrid\Email();
+return "";
 $email->addTo($address)
     ->setFrom($email)
     ->setSubject($sub)
