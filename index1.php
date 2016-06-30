@@ -6,7 +6,8 @@ require 'vendor/autoload.php';
 if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
 if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
-
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 /* Сюда впишите свою эл. почту */
  $address = "amadeomazerai93@gmail.com";
