@@ -24,6 +24,7 @@ $email = new SendGrid\Email();
 $email->addTo($address)
     ->setFrom($from)
     ->setSubject($sub)
+    ->setText("Заявка")
     ->setHtml("<strong>$mes</strong>");
 
 $sendgrid->send($email);
