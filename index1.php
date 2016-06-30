@@ -5,7 +5,7 @@ require 'vendor/autoload.php';
 /* Здесь проверяется существование переменных */
 if (isset($_POST['phone'])) {$phone = $_POST['phone'];}
 if (isset($_POST['name'])) {$name = $_POST['name'];}
-if (isset($_POST['adress'])) {$adress = $_POST['adress'];}
+if (isset($_POST['address'])) {$address = $_POST['address'];}
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
