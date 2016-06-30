@@ -24,8 +24,7 @@ $email = new SendGrid\Email();
 $email->addTo($address)
     ->setFrom($from)
     ->setSubject($sub)
-    ->setText($mes)
-    ->setHtml('<strong>Hello World!</strong>');
+    ->setHtml("<strong>$mes</strong>");
 
 $sendgrid->send($email);
 
