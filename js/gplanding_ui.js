@@ -262,6 +262,7 @@ function initialize() {
 
 $('#contact_form input[type="submit"]').bind('click', function() {
 	return true;
+	alert("asdad");
 	$("#contact_form").validate({
 		rules: {
 			name: { required:true },
