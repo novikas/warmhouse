@@ -281,7 +281,7 @@ $('#contact_form input[type="submit"]').bind('click', function() {
 	if($("#contact_form").valid()) {
 
 		$.ajax({
-			url: "mail.php",
+			url: "index1.php",
 			type: 'POST',
 			data: "name="+$('#name').val()+"&email="+$('#email').val()+"&subject="+$('#subject').val()+"&message="+$('#message').val(),
 		  	success: function(data) {
