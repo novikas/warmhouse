@@ -17,12 +17,12 @@ ini_set("display_errors", 1);
 
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
 $sub='Заказ с сайта'; //сабж
-$email='noreply@warmhouse.herokuapp.com'; // от кого
+$from='noreply@warmhouse.herokuapp.com'; // от кого
 $sendgrid = new SendGrid('app51144825@heroku.com', 'GetPassword93');
 
 $email = new SendGrid\Email();
 $email->addTo($address)
-    ->setFrom($email)
+    ->setFrom($from)
     ->setSubject($sub)
     ->setText($mes)
     ->setHtml('<strong>Hello World!</strong>');
